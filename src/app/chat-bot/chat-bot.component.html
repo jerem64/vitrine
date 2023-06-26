@@ -1,0 +1,13 @@
+<div class="chat-bot">
+    <button class="toggle-button" (click)="toggleChat()">Toggle Chat</button>
+    <div class="chat-window" [ngClass]="{ 'expanded': isChatExpanded }">
+      <div class="chat-messages">
+        <!-- Afficher les messages du chat ici -->
+      </div>
+      <div class="chat-input">
+        <input type="text" placeholder="Type your message" />
+        <button class="send-button">Send</button>
+      </div>
+    </div>
+  </div>
+  
