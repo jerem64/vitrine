@@ -1,0 +1,25 @@
+.chatbot-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    /* Styles supplémentaires pour le bouton */
+  }
+  
+  .chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s;
+    /* Styles supplémentaires pour le chatbot */
+  }
+  
+  .chatbot-container.collapsed {
+    height: 40px;
+    /* Styles supplémentaires pour le chatbot réduit */
+  }
+  
