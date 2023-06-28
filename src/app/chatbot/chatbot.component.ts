@@ -19,6 +19,7 @@ export class ChatbotComponent {
   constructor(private http: HttpClient) {}
 
   sendMessage() {
+    const debug = true;
     const userMessage = this.userInput;
 
     // Ajouter le message de l'utilisateur à la liste des messages
@@ -29,13 +30,20 @@ export class ChatbotComponent {
     //const apiUrl = 'http://127.0.0.1:5000/ask_question';
     const payload = { input: userMessage };
 
-    this.http.post(apiUrl, payload).subscribe(response => {
-      // Traiter la réponse de l'API et l'ajouter à la liste des messages
-      const apiResponse = response as { output: string };
-      const botResponse = apiResponse.output;
+    if(debug)
+    {
+      this.chatMessages.push({ text: "réponse du bot", isUserMessage: false });
+    }
+    else
+    {
+      this.http.post(apiUrl, payload).subscribe(response => {
+        // Traiter la réponse de l'API et l'ajouter à la liste des messages
+        const apiResponse = response as { output: string };
+        const botResponse = apiResponse.output;
 
-      this.chatMessages.push({ text: botResponse, isUserMessage: false });
-    });
+        this.chatMessages.push({ text: botResponse, isUserMessage: false });
+      });
+    }
 
     // Réinitialiser la valeur de la textbox
     this.userInput = '';
