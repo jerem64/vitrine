@@ -8,13 +8,17 @@ import { HomeComponent } from './home/home.component';
 import { ResumeComponent } from './resume/resume.component';
 import { ChatbotComponent } from './chatbot/chatbot.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ProjectsComponent } from './projects/projects.component';
+import { ProjectComponent } from './project/project.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ResumeComponent,
-    ChatbotComponent
+    ChatbotComponent,
+    ProjectsComponent,
+    ProjectComponent
   ],
   imports: [
     MatIconModule,

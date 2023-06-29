@@ -1,3 +1,93 @@
 .container {
     display: flex;
+    flex-direction: column;
+    height: 100vh; /* Réglez la hauteur du conteneur sur 100vh pour occuper tout l'écran */  
+}
+
+
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    background-image: url('../resources/cropped_banner_background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    height: 15vh;
+    width:100vw;
+    order: 1;    
+    position: fixed;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.nav-link {
+    padding-right: 5px; /* Espacement à droite entre les liens */
+}  
+
+.fixed-navbar .left-align {
+    display: flex;
+    align-items: flex-start;
+}
+
+.fixed-navbar .right-align {
+    display: flex;
+    align-items: flex-end;
+}
+
+.icon{
+    width: 20px;
+    height: 20px;
+}
+
+.linkedin-icon {
+    display: inline-block;
+    background-image: url('../resources/icon-linkedin.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mat-icon {
+    color: white;
+}
+
+
+.content-container {
+    flex: 1; /* Permet au conteneur de remplir l'espace disponible */
+    position: relative; /* Définissez la position relative pour positionner le contenu interne */
+    overflow-y: auto; /* Affiche la barre de défilement uniquement si le contenu dépasse la hauteur du conteneur */  
+}
+
+.content {
+    position: absolute; /* Définissez la position absolue pour placer le contenu à l'intérieur du conteneur */
+    top: 15%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 75vh;
+}
+
+
+
+
+.chatbot {
+    bottom: 20px;
+    right: 20px;
+}
+
+.button-as-text {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    transition: font-size 0.3s;
+}
+  
+.button-as-text:hover {
+    text-decoration: underline;
+    font-size: 1.2em;
 }
