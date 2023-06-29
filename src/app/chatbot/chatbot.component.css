@@ -3,21 +3,35 @@
   position: fixed;
   display: flex;
   flex-direction: column-reverse;
-  top: 20px;
-  bottom: 70px;
-  right: 20px;
-  width: 300px;
-  height: 100%;
-  background-color: hsla(0, 0%, 100%, 0);
+  bottom: 100px;
+  right: 15px;
+  width: 365px;
+  height: 500px;
+  background-color: hsla(0, 0%, 0%, 0);
   align-items: flex-start;
 }
 
 /* Container de la saisie de messages, se trouve à l'intérieur du chatbot-container */
 .chatbot-input {
+  display: flex;
   position: fixed;
-  bottom: 0;
-  right: 0;
-  background-color: #f8f8f800;
+  align-items: flex-start;
+  right: 15px;
+  bottom: 65px;
+  height: 30px;
+}
+.chatbot-input-send {
+  background-image:url('./resources/send.png');
+  background-color: #00000000;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  border: 0px;
+}
+.chatbot-input-text {
+  width: 328px;
+  height: 25px;
 }
 
 /* Container des messages du bot et de l'utilisateur, se trouve à l'intérieur du chatbot-container */
@@ -27,16 +41,41 @@
   overflow-y: scroll;
   pointer-events: none; /* Permet aux clics de passer à travers */
   align-items: flex-end;
+  bottom: 100px;
+  bottom: 120px;
 }
 
-/* Message de l'utilisateur, se trouve à l'intérieur du chatbot-messages */
+.message {
+  padding: 5px;
+  overflow: hidden;
+}
 .user-message {
+  border-radius: 15px 15px 15px 0 ;
   align-self: flex-start;
-  overflow: hidden;
+  background-color: #a1a1a1d5;
+}
+.chatbot-message {
+  border-radius: 15px 15px 0 15px ;
+  align-self: flex-end;
+  background-color: #199ce2d5;
 }
 
-/* Message du bot, se trouve à l'intérieur du chatbot-messages */
-.chatbot-message {
-  align-self: flex-end;
-  overflow: hidden;
+.chatbot-button {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  width: 45px;
+  height: 45px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px;
+  border-radius: 5px 0 5px 0;
+}
+.chatbot-button-open {
+  background-image:url('./resources/chevron-down.png');
+}
+.chatbot-button-closed {
+  background-image:url('./resources/chatbot.png');
 }

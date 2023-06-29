@@ -1,12 +1,15 @@
-<div class="chatbot-container" [ngClass]="{'collapsed': isChatbotCollapsed}">
-  <div class="chatbot-messages" #chatbotMessagesContainer 
-  *ngFor="let message of chatMessages; let i = index"
-  [ngClass]="{'user-message': message.isUserMessage, 'chatbot-message': !message.isUserMessage}">
-    {{ message.text }}
-  </div>
-
-  <div class="chatbot-input">
-    <input type="text" [(ngModel)]="userInput" (keydown.enter)="sendMessage()" placeholder="Votre message..." />
-    <button (click)="sendMessage()">Envoyer</button>
+<div class="chatbot-container" *ngIf="isVisible">
+  <div class="chatbot-messages" #chatbotMessagesContainer *ngFor="let message of chatMessages; let i = index" [ngClass]="message.isUserMessage ? 'message user-message' : 'message chatbot-message'">
+    <div class="message">
+      {{ message.text }}
+    </div>
   </div>
 </div>
+
+<div class="chatbot-input" *ngIf="isVisible">
+  <input class="chatbot-input-text" type="text" [(ngModel)]="userInput" (keydown.enter)="sendMessage()" placeholder="Votre message..." />
+  <button class="chatbot-input-send" (click)="sendMessage()"></button>
+</div>
+
+<button class="chatbot-button" (click)="toogle()" [ngClass]="isVisible ? 'chatbot-button-open' : 'chatbot-button-closed'"></button>
+

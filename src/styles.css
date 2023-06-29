@@ -170,11 +170,3 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     margin-left: 10px;
     margin-right: 10px;
 }
-
-
-
-
-.chatbot {
-    bottom: 20px;
-    right: 20px;
-}
