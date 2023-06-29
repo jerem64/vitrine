@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Renderer2, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 interface ChatMessage {
@@ -11,19 +11,25 @@ interface ChatMessage {
   templateUrl: './chatbot.component.html',
   styleUrls: ['./chatbot.component.css']
 })
-export class ChatbotComponent {
+export class ChatbotComponent implements AfterViewInit {
+  @ViewChild('chatbotMessagesContainer', { static: false }) chatbotMessagesContainer!: ElementRef;
+
   isChatbotCollapsed = false;
   userInput: string = '';
   chatMessages: ChatMessage[] = [];
 
-  constructor(private http: HttpClient) {}
+  constructor(private renderer: Renderer2, private http: HttpClient) {}
+
+  ngAfterViewInit() {
+  } 
+
 
   sendMessage() {
     const debug = true;
     const userMessage = this.userInput;
 
     // Ajouter le message de l'utilisateur à la liste des messages
-    this.chatMessages.push({ text: userMessage, isUserMessage: true });
+    this.chatMessages.unshift({ text: userMessage, isUserMessage: true });
 
     // Appeler l'API avec le message de l'utilisateur
     const apiUrl = 'https://apiflaskopenaicv-fhwxqvaupa-ew.a.run.app/ask_question';
@@ -32,7 +38,7 @@ export class ChatbotComponent {
 
     if(debug)
     {
-      this.chatMessages.push({ text: "réponse du bot", isUserMessage: false });
+      this.chatMessages.unshift({ text: "réponse du bot" + userMessage , isUserMessage: false });
     }
     else
     {
@@ -41,11 +47,25 @@ export class ChatbotComponent {
         const apiResponse = response as { output: string };
         const botResponse = apiResponse.output;
 
-        this.chatMessages.push({ text: botResponse, isUserMessage: false });
+        this.chatMessages.unshift({ text: botResponse, isUserMessage: false });
       });
     }
 
+  // Supprimer les anciens messages pour conserver uniquement les 5 derniers
+  if (this.chatMessages.length > 16) {
+    this.chatMessages.splice(0 - 2);
+  }
+
     // Réinitialiser la valeur de la textbox
     this.userInput = '';
+  }
+
+  isMessageOld(index: number): boolean {
+    // Logic to determine if the message at the given index is considered old
+    // Return true if the message is old, false otherwise
+    // You can implement your own logic based on your requirements
+    // For example, you can define a threshold index where messages beyond that index are considered old
+    const oldMessageThreshold = 3;
+    return index >= oldMessageThreshold;
   }
 }

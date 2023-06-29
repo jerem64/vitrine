@@ -8,9 +8,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .navbar {
     display: flex;
     align-items: center;
-    background-color: #486b92;
+    background-image: url('./resources/cropped_banner_background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
     color: white;
-    height: 50px;
+    height: 15%;
     width:100vw;
     order: 1;
     /* Styles supplémentaires pour la barre de menu en haut */

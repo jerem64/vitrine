@@ -1,8 +1,8 @@
 <div class="chatbot-container" [ngClass]="{'collapsed': isChatbotCollapsed}">
-  <div class="chatbot-messages">
-    <div *ngFor="let message of chatMessages" [ngClass]="{'user-message': message.isUserMessage, 'chatbot-message': !message.isUserMessage}">
-      {{ message.text }}
-    </div>
+  <div class="chatbot-messages" #chatbotMessagesContainer 
+  *ngFor="let message of chatMessages; let i = index"
+  [ngClass]="{'user-message': message.isUserMessage, 'chatbot-message': !message.isUserMessage}">
+    {{ message.text }}
   </div>
 
   <div class="chatbot-input">
