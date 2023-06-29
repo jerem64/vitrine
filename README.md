@@ -26,6 +26,8 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
+## Deploiement
+firebase deploy --only hosting
 
 Project Console: https://console.firebase.google.com/project/vitrine-6b6cc/overview
 Hosting URL: https://vitrine-6b6cc.web.app

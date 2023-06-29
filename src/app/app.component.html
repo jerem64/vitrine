@@ -5,15 +5,18 @@
         Jérémy Chassin - ML ENGINEER
       </div>
 
-      <div class="right-align">
+      <div>
         <a class="white-icon nav-link" target="_blank" class="nav-link" href="mailto:jerem.chassin@gmail.com">
           <mat-icon>email</mat-icon>
         </a>
         <a class="nav-link linkedin-icon icon" target="_blank" href="https://www.linkedin.com/in/jeremy-chassin/"></a>    
       </div>
+
+      <div class="circle-frame">
+      </div>
     </div>
 
-    <div class="left-align">
+    <div class="menu">
       <button class="button-as-text" (click)="loadContent('home')" [ngClass]="{'active': selectedItem === 'home'}">Home</button>
       <button class="button-as-text" (click)="loadContent('projects')" [ngClass]="{'active': selectedItem === 'projects'}">Projects</button>
       <button class="button-as-text" (click)="loadContent('resume')" [ngClass]="{'active': selectedItem === 'resume'}">Resume</button>
