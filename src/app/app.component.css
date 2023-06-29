@@ -78,9 +78,24 @@
     cursor: pointer;
     text-decoration: none;
     transition: font-size 0.3s;
+    font-weight: bold;
+    position: relative;
+    width: 100px;
+    height: 50px;
+    top: calc(5vh - 1px);; /* Ajustez la valeur pour correspondre à la hauteur de la navbar */
 }
   
 .button-as-text:hover {
     text-decoration: underline;
     font-size: 1.2em;
+}
+
+.button-as-text.active {
+    color: black;
+    background-color: white;
+    font-weight: bold;
+    position: relative;
+    width: 100px;
+    height: 50px;
+    top: calc(5vh - 1px);; /* Ajustez la valeur pour correspondre à la hauteur de la navbar */
 }
