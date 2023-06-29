@@ -1,8 +1,16 @@
 <div class="container">
   <div class="navbar fixed-navbar">
-    <div class="left-align">
-      Jérémy Chassin<br>
-      MACHINE LEARNING ENGINEER
+    <div class="top-elements">
+      <div>
+        Jérémy Chassin - ML ENGINEER
+      </div>
+
+      <div class="right-align">
+        <a class="white-icon nav-link" target="_blank" class="nav-link" href="mailto:jerem.chassin@gmail.com">
+          <mat-icon>email</mat-icon>
+        </a>
+        <a class="nav-link linkedin-icon icon" target="_blank" href="https://www.linkedin.com/in/jeremy-chassin/"></a>    
+      </div>
     </div>
 
     <div class="left-align">
@@ -10,28 +18,23 @@
       <button class="button-as-text" (click)="loadContent('projects')" [ngClass]="{'active': selectedItem === 'projects'}">Projects</button>
       <button class="button-as-text" (click)="loadContent('resume')" [ngClass]="{'active': selectedItem === 'resume'}">Resume</button>
     </div>
-
-    <div class="right-align">
-      <a class="white-icon nav-link" target="_blank" class="nav-link" href="mailto:jerem.chassin@gmail.com">
-        <mat-icon>email</mat-icon>
-      </a>
-      <a class="nav-link linkedin-icon icon" target="_blank" href="https://www.linkedin.com/in/jeremy-chassin/"></a>    
-    </div>
   </div>
 
   <div class="content">
-    <ng-container *ngIf="selectedItem === 'home'" >
-      <app-home ></app-home>
-    </ng-container>
+    <div class="content-container">
+      <ng-container *ngIf="selectedItem === 'home'" >
+        <app-home ></app-home>
+      </ng-container>
 
-    <ng-container *ngIf="selectedItem === 'projects'" >
-      <app-projects></app-projects>
-    </ng-container>
+      <ng-container *ngIf="selectedItem === 'projects'" >
+        <app-projects></app-projects>
+      </ng-container>
 
-    <ng-container *ngIf="selectedItem === 'resume'">
-      <app-resume></app-resume>
-    </ng-container>
+      <ng-container *ngIf="selectedItem === 'resume'">
+        <app-resume></app-resume>
+      </ng-container>
   </div>
+</div>
 
   <div>
     <app-chatbot></app-chatbot>

@@ -9,7 +9,7 @@
 
 .navbar {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     background-image: url('../resources/cropped_banner_background.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -18,17 +18,25 @@
     width:100vw;
     order: 1;    
     position: fixed;
-    justify-content: space-between;
     z-index: 100;
 }
 
+.fixed-navbar .top-elements {
+    display: flex;
+    flex-direction: row;
+    width:100vw;
+    margin-left: 10px;
+    margin-top: 2vh;
+}
+
 .nav-link {
-    padding-right: 5px; /* Espacement à droite entre les liens */
+    padding-left: 5px;
 }  
 
 .fixed-navbar .left-align {
     display: flex;
     align-items: flex-start;
+    margin-left: 20px;
 }
 
 .fixed-navbar .right-align {
@@ -52,23 +60,6 @@
     color: white;
 }
 
-
-.content{
-    flex: 1; /* Permet au conteneur de remplir l'espace disponible */
-    margin-top: 15vh;
-    overflow-y: auto; /* Affiche la barre de défilement uniquement si le contenu dépasse la hauteur du conteneur */
-    bottom: 0;
-    flex-direction: column-reverse;
-}
-
-
-
-
-.chatbot {
-    bottom: 20px;
-    right: 20px;
-}
-
 .button-as-text {
     background: none;
     border: none;
@@ -77,25 +68,46 @@
     color: inherit;
     cursor: pointer;
     text-decoration: none;
-    transition: font-size 0.3s;
     font-weight: bold;
     position: relative;
-    width: 100px;
-    height: 50px;
-    top: calc(5vh - 1px);; /* Ajustez la valeur pour correspondre à la hauteur de la navbar */
+    width: 120px;
+    height: 40px;
+    top: calc(5vh); /* Ajustez la valeur pour correspondre à la hauteur de la navbar */
 }
-  
+
 .button-as-text:hover {
-    text-decoration: underline;
     font-size: 1.2em;
+    transition: font-size 0.3s;
 }
 
 .button-as-text.active {
     color: black;
     background-color: white;
-    font-weight: bold;
     position: relative;
-    width: 100px;
-    height: 50px;
-    top: calc(5vh - 1px);; /* Ajustez la valeur pour correspondre à la hauteur de la navbar */
+    top: calc(5vh);    
+    font-size: 1em;
+}
+
+
+
+
+
+.content{
+    margin-top: 15vh;
+    margin-left: 10px;
+    overflow-y: auto;
+}
+
+.content-container{
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+
+
+.chatbot {
+    bottom: 20px;
+    right: 20px;
 }
