@@ -19,20 +19,18 @@
     </div>
   </div>
 
-  <div class="content-container">
-    <div class="content">
-      <ng-container *ngIf="selectedItem === 'home'" >
-        <app-home ></app-home>
-      </ng-container>
-      
-      <ng-container *ngIf="selectedItem === 'projects'" >
-        <app-projects></app-projects>
-      </ng-container>
+  <div class="content">
+    <ng-container *ngIf="selectedItem === 'home'" >
+      <app-home ></app-home>
+    </ng-container>
 
-      <ng-container *ngIf="selectedItem === 'resume'">
-        <app-resume></app-resume>
-      </ng-container>
-    </div>
+    <ng-container *ngIf="selectedItem === 'projects'" >
+      <app-projects></app-projects>
+    </ng-container>
+
+    <ng-container *ngIf="selectedItem === 'resume'">
+      <app-resume></app-resume>
+    </ng-container>
   </div>
 
   <div>

@@ -53,19 +53,12 @@
 }
 
 
-.content-container {
+.content{
     flex: 1; /* Permet au conteneur de remplir l'espace disponible */
-    position: relative; /* Définissez la position relative pour positionner le contenu interne */
-    overflow-y: auto; /* Affiche la barre de défilement uniquement si le contenu dépasse la hauteur du conteneur */  
-}
-
-.content {
-    position: absolute; /* Définissez la position absolue pour placer le contenu à l'intérieur du conteneur */
-    top: 15%;
-    left: 0;
-    right: 0;
+    margin-top: 15vh;
+    overflow-y: auto; /* Affiche la barre de défilement uniquement si le contenu dépasse la hauteur du conteneur */
     bottom: 0;
-    height: 75vh;
+    flex-direction: column-reverse;
 }
 
 
