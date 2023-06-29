@@ -1,2 +1,180 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Réglez la hauteur du conteneur sur 100vh pour occuper tout l'écran */  
+}
+
+
+
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    background-image: url('./resources/cropped_banner_background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    height: 115px;
+    width:100vw;
+    order: 1;    
+    position: fixed;
+    z-index: 100;
+}
+
+.fixed-navbar .top-elements {
+    display: flex;
+    flex-direction: row;
+    width:100vw;
+    height: 50px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.fixed-navbar .menu {
+    display: flex;
+    align-items: flex-start;
+    margin-left: 10px;
+}
+.fixed-navbar .right-align {
+    display: flex;
+    align-items: flex-end;
+}
+
+.icon {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+}
+.email-icon {
+    background-image: url('./resources/email.png');
+}
+.linkedin-icon {
+    background-image: url('./resources/icon-linkedin.png');
+}
+
+.button-as-text {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    width: 120px;
+    height: 40px;
+    border-radius: 3px 3px 0 0;
+    top: 16px;
+}
+.button-as-text:hover {
+    font-size: 1.2em;
+    transition: font-size 0.3s;
+}
+.button-as-text.active {
+    color: black;
+    background-color: white;
+    position: relative;
+    font-size: 1em;
+}
+
+.circle-frame {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-image: url('./resources/moi.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    z-index: 1;
+    top: 10px;
+    right: 10px;
+    border: 1px solid white;
+}
+
+.links {
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    top: 25px;
+    right: 80px;
+}
+
+.title {
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+}
+.title-spacer {
+    height: 0px;
+    width: 10px;
+}
+.title-name {
+    font-size: large;
+}
+.title-function {
+    font-size: large;
+}
+
+@media (min-width: 450px) {
+    .circle-frame {
+        width: 120px;
+        height: 120px;
+        border: 2px solid white;
+    }
+    
+    .links {
+        position: fixed;
+        z-index: 1;
+        top: 40px;
+        right: 150px;
+    }
+
+    .icon {
+        display: inline-block;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 40px;
+        height: 40px;
+    }
+
+    .title {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .title-name {
+        font-size: large;
+    }
+    .title-function {
+        left: 10;
+        font-size: medium;
+    }
+}
+
+
+
+
+.content{
+    margin-top: 15vh;
+    margin-left: 10px;
+    overflow-y: auto;
+}
+
+.content-container{
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+
+
+.chatbot {
+    bottom: 20px;
+    right: 20px;
+}
