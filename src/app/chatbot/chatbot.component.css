@@ -5,7 +5,8 @@
   flex-direction: column-reverse;
   bottom: 100px;
   right: 15px;
-  width: 365px;
+  max-width: 400px;
+  width: calc(95%);
   height: 500px;
   background-color: hsla(0, 0%, 0%, 0);
   align-items: flex-start;
@@ -16,6 +17,8 @@
   display: flex;
   position: fixed;
   align-items: flex-start;
+  max-width: 400px;
+  width: calc(95%);
   right: 15px;
   bottom: 65px;
   height: 30px;
@@ -30,7 +33,8 @@
   border: 0px;
 }
 .chatbot-input-text {
-  width: 328px;
+  max-width: 363px;
+  width: 100%;
   height: 25px;
 }
 
@@ -42,7 +46,6 @@
   pointer-events: none; /* Permet aux clics de passer à travers */
   align-items: flex-end;
   bottom: 100px;
-  bottom: 120px;
 }
 
 .message {
