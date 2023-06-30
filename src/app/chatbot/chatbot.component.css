@@ -7,9 +7,16 @@
   right: 15px;
   max-width: 400px;
   width: calc(95%);
-  height: 500px;
+  height: 1000%;
   background-color: hsla(0, 0%, 0%, 0);
   align-items: flex-start;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.3s, transform 0.3s;
+}
+.chatbot-container.visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 /* Container de la saisie de messages, se trouve à l'intérieur du chatbot-container */
@@ -22,7 +29,15 @@
   right: 15px;
   bottom: 65px;
   height: 30px;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.3s, transform 0.3s;
 }
+.chatbot-input.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 .chatbot-input-send {
   background-image:url('./resources/send.png');
   background-color: #00000000;
@@ -49,7 +64,7 @@
 }
 
 .message {
-  padding: 5px;
+  padding: 2px 5px 2px 5px;
   margin-top: 5px;
   overflow: hidden;
 }
@@ -76,6 +91,10 @@
   background-color: rgba(0, 0, 0, 0);
   border: 1px;
   border-radius: 5px 0 5px 0;
+  transition: transform 0.3s;
+}
+.chatbot-button:hover {
+  transform: scale(1.2);
 }
 .chatbot-button-open {
   background-image:url('./resources/chevron-down.png');

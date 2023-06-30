@@ -25,14 +25,11 @@ export class ChatbotComponent implements AfterViewInit {
   ngAfterViewInit() {
   } 
 
-  toogle() {
+  toggle() {
     this.isVisible = !this.isVisible;
-    setTimeout(() => {this.chatbotInput.nativeElement.focus();}, 5);
-    
-    if(this.isVisible)
-    {
+    setTimeout(() => {
       this.chatbotInput.nativeElement.focus();
-    }
+    }, 5);
   }
 
   sendMessage() {    
@@ -61,12 +58,13 @@ export class ChatbotComponent implements AfterViewInit {
       }
 
       // Supprime les anciens messages pour conserver uniquement les 8 derniers
-      if (this.chatMessages.length > 10) {
+      if (this.chatMessages.length > 20) {
         this.chatMessages.splice(0 - 2);
       }
 
       // Réinitialise la valeur de la textbox
       this.userInput = '';
+      this.chatbotInput.nativeElement.focus();
     }
   }
 }
