@@ -170,3 +170,18 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     margin-left: 10px;
     margin-right: 10px;
 }
+
+
+
+
+.footer {
+    display: flex;
+    position: fixed;
+    font-size: xx-small;
+    background-color: #f8f8f8;
+    justify-content: center;
+    bottom: 0px;
+    height: 15px;
+    width: 100%;
+    z-index: 1;
+}

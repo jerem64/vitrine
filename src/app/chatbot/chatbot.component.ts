@@ -28,7 +28,10 @@ export class ChatbotComponent implements AfterViewInit {
   toggle() {
     this.isVisible = !this.isVisible;
     setTimeout(() => {
-      this.chatbotInput.nativeElement.focus();
+      if (this.isVisible)
+      {
+        this.chatbotInput.nativeElement.focus();
+      }
     }, 5);
   }
 
