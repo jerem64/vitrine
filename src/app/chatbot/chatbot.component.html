@@ -7,7 +7,7 @@
 </div>
 
 <div class="chatbot-input" *ngIf="isVisible">
-  <input class="chatbot-input-text" type="text" [(ngModel)]="userInput" (keydown.enter)="sendMessage()" placeholder="Votre message..." />
+  <input class="chatbot-input-text" type="text" #chatbotInput [(ngModel)]="userInput" (keydown.enter)="sendMessage()" placeholder="Votre message..." />
   <button class="chatbot-input-send" (click)="sendMessage()"></button>
 </div>
 

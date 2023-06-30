@@ -13,6 +13,8 @@ interface ChatMessage {
 })
 export class ChatbotComponent implements AfterViewInit {
   @ViewChild('chatbotMessagesContainer', { static: false }) chatbotMessagesContainer!: ElementRef;
+  @ViewChild('chatbotInput', { static: false }) chatbotInput!: ElementRef;
+
 
   userInput: string = '';
   chatMessages: ChatMessage[] = [];
@@ -25,6 +27,12 @@ export class ChatbotComponent implements AfterViewInit {
 
   toogle() {
     this.isVisible = !this.isVisible;
+    setTimeout(() => {this.chatbotInput.nativeElement.focus();}, 5);
+    
+    if(this.isVisible)
+    {
+      this.chatbotInput.nativeElement.focus();
+    }
   }
 
   sendMessage() {    
