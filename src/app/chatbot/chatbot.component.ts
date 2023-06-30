@@ -33,7 +33,7 @@ export class ChatbotComponent implements AfterViewInit {
   }
 
   sendMessage() {    
-    const debug = true;
+    const debug = false;
     const userMessage = this.userInput;
 
     if(this.userInput!="")
