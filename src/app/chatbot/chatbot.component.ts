@@ -19,6 +19,7 @@ export class ChatbotComponent implements AfterViewInit {
   userInput: string = '';
   chatMessages: ChatMessage[] = [];
   isVisible: boolean = false;
+  isWiggling: boolean = true; // New property for button animation
 
   constructor(private renderer: Renderer2, private http: HttpClient) {}
 
@@ -27,6 +28,8 @@ export class ChatbotComponent implements AfterViewInit {
 
   toggle() {
     this.isVisible = !this.isVisible;
+    this.isWiggling = false; // Stop the button wiggle when toggling visibility
+
     setTimeout(() => {
       if (this.isVisible)
       {
@@ -35,17 +38,17 @@ export class ChatbotComponent implements AfterViewInit {
     }, 5);
   }
 
-  sendMessage() {    
+  sendMessage() {
     const debug = false;
     const userMessage = this.userInput;
 
     if(this.userInput!="")
     {
       this.chatMessages.unshift({ text: userMessage, isUserMessage: true });
-      
+
       const apiUrl = 'https://apiflaskopenaicv-fhwxqvaupa-ew.a.run.app/ask_question';
       const payload = { input: userMessage };
-      
+
       if(debug)
       {
         this.chatMessages.unshift({ text: "réponse du bot" + userMessage , isUserMessage: false });

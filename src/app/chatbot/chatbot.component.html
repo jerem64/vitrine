@@ -11,4 +11,4 @@
   <button class="chatbot-input-send" (click)="sendMessage()"></button>
 </div>
 
-<button class="chatbot-button" (click)="toggle()" [ngClass]="isVisible ? 'chatbot-button-open' : 'chatbot-button-closed'"></button>
+<button class="chatbot-button" (click)="toggle()" [ngClass]="{ 'chatbot-button-open': isVisible, 'chatbot-button-closed': !isVisible, 'wiggle': isWiggling }"></button>
