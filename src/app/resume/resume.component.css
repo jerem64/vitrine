@@ -54,7 +54,7 @@
     display: flex;
     flex-wrap: wrap;
 }
-  
+
 .resume-left-column {
     width: 66%;
 }
@@ -76,8 +76,16 @@ a:hover {
   
 /* Media query for smartphones */
 @media (max-width: 576px) {
-    .content {
+    .resume-content {
         flex-direction: column;
+    }
+    
+    .resume-left-column {
+        width: 100%;
+    }
+    
+    .resume-right-column {
+        width: 100%;
     }
 }
   
