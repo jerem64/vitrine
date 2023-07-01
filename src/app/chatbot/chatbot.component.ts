@@ -1,5 +1,6 @@
 import { Component, Renderer2, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { SharedService } from '../shared.service';
 
 interface ChatMessage {
   text: string;
@@ -21,10 +22,27 @@ export class ChatbotComponent implements AfterViewInit {
   isVisible: boolean = false;
   isWiggling: boolean = true; // New property for button animation
 
-  constructor(private renderer: Renderer2, private http: HttpClient) {}
+  constructor(private renderer: Renderer2, private http: HttpClient, private sharedService: SharedService) {
+    this.sharedService.chatbotEvent.subscribe(() => {
+      this.openChatbot();
+    });
+  }
 
   ngAfterViewInit() {
   } 
+
+  openChatbot() {
+    this.isVisible = true;
+    this.isWiggling = false;
+
+    setTimeout(() => {
+      if (this.isVisible)
+      {
+        this.chatbotInput.nativeElement.focus();
+      }
+    }, 5);
+  }
+
 
   toggle() {
     this.isVisible = !this.isVisible;

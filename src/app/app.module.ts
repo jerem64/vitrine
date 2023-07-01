@@ -10,6 +10,7 @@ import { ChatbotComponent } from './chatbot/chatbot.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProjectsComponent } from './projects/projects.component';
 import { ProjectComponent } from './project/project.component';
+import { SharedService } from './shared.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { ProjectComponent } from './project/project.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [SharedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
