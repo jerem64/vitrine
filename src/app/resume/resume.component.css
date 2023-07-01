@@ -1,33 +1,67 @@
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+.container-resume {
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    padding: 0 20px 20px 20px;
   }
-  
-  .header {
+ 
+.resume-header {
     text-align: center;
     margin-bottom: 20px;
-  }
+}
   
-  .contact {
+.contact {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: row;
+    justify-content: center;
     margin-bottom: 20px;
-  }
-  
-  .content {
+}
+.contact-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 15px 0 15px;
+}
+.icon-img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 2px 0 2px;
+    width: 25px;
+    height: 25px;
+    border: 0 !important;
+    vertical-align: middle; /* Ajout de la propriété */
+}
+.mail-img {
+    background-image:url('./resources/icon-email.png');
+}
+.linkedin-img {
+    background-image:url('./resources/icon-linkedin.png');
+}
+.address-img {
+    background-image:url('./resources/icon-address.png');
+}
+.phone-img {
+    background-image:url('./resources/icon-phone.png');
+}
+
+.horizontal-line {
+    border: 1px;
+    border-top: 1px solid black;
+    margin: 10px 0; /* Adjust margin as per your requirements */
+}  
+
+.resume-content {
     display: flex;
     flex-wrap: wrap;
-  }
+}
   
-  .column {
+.resume-left-column {
     flex: 0 0 48%;
-  }
+}
   
-  .column h2 {
+.resume-right-column h2 {
     margin-bottom: 10px;
-  }
+}
   
   ul {
     padding: 0;
