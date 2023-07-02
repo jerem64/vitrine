@@ -1,0 +1,7 @@
+<div class="project-card">
+    <h2>{{ project.name }}</h2>
+    <img src="{{ project.thumbnail }}" alt="{{ project.name }}" />
+    <p>{{ project.description }}</p>
+    <button (click)="openNotebook.emit(project.notebookUrl)">View Notebook</button>
+</div>
+  

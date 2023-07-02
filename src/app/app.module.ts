@@ -9,7 +9,7 @@ import { ResumeComponent } from './resume/resume.component';
 import { ChatbotComponent } from './chatbot/chatbot.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProjectsComponent } from './projects/projects.component';
-import { ProjectComponent } from './project/project.component';
+import { ProjectCardComponent } from './project-card/project-card.component';
 import { SharedService } from './shared.service';
 
 @NgModule({
@@ -19,7 +19,7 @@ import { SharedService } from './shared.service';
     ResumeComponent,
     ChatbotComponent,
     ProjectsComponent,
-    ProjectComponent
+    ProjectCardComponent
   ],
   imports: [
     MatIconModule,

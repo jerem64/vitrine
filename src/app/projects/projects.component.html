@@ -1,1 +1,4 @@
-<p>projects works!</p>
+<div class="projects">
+    <app-project-card *ngFor="let project of projects" [project]="project" (openNotebook)="openNotebook($event)"></app-project-card>
+</div>
+  
