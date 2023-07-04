@@ -13,7 +13,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; color: rgb(
 .navbar {
     display: flex;
     flex-direction: column;
-    background-image: url('./resources/cropped_banner_background.png');
+    background-image: url('./assets/cropped-banner-background.png');
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
@@ -50,10 +50,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; color: rgb(
     height: 30px;
 }
 .email-icon {
-    background-image: url('./resources/email.png');
+    background-image: url('./assets/icon-email.png');
 }
 .linkedin-icon {
-    background-image: url('./resources/icon-linkedin.png');
+    background-image: url('./assets/icon-linkedin.png');
 }
 
 .button-as-text {
@@ -86,7 +86,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; color: rgb(
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-image: url('./resources/moi.jpg');
+    background-image: url('./assets/moi.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     position: fixed;

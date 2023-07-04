@@ -1,5 +1,5 @@
 .cbimg {
-    background-image:url('./resources/icon-chatbot.png');
+    background-image:url('../../assets/icon-chatbot.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-color: transparent;
@@ -8,6 +8,7 @@
     height: 20px;
     vertical-align: middle;
     border: none !important;
+    cursor:pointer;
 }
 
 .home-container {

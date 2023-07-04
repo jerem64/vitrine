@@ -7,6 +7,22 @@
     max-width: 450px;
     flex: 1 1 450px;
 }
+
+.project-image {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    margin: 0 2px 0 2px;
+    width: 100%;
+    vertical-align: middle;
+    border: none !important;
+    position: relative;
+}
+.project-image::before {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
   
   
 .project-card h2 {
@@ -14,23 +30,35 @@
     margin-top: 0;
 }
   
-.project-card img {
-    width: 100%;
-    max-height: 200px;
-    object-fit: cover;
-    margin-bottom: 10px;
-}
-  
 .project-card p {
     margin-bottom: 10px;
 }
-  
-.project-card button {
-    background-color: #4caf50;
+
+.links-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}  
+.button-link {
+    background-color: #199be2;
     color: white;
-    padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+.link-icon {
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.icon-colab {
+    background-image: url('../../assets/icon-colab.png');
+}
+.icon-github {
+    background-image: url('../../assets/icon-github.png');
+}
+.icon-dataset {
+    background-image: url('../../assets/icon-dataset.png');
 }
   

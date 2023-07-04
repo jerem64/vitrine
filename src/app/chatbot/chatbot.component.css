@@ -39,7 +39,7 @@
 }
 
 .chatbot-input-send {
-  background-image:url('./resources/send.png');
+  background-image:url('../../assets/send.png');
   background-color: #00000000;
   background-repeat: no-repeat;
   background-size: cover;
@@ -97,10 +97,10 @@
   transform: scale(1.2);
 }
 .chatbot-button-open {
-  background-image:url('./resources/chevron-down.png');
+  background-image:url('../../assets/chevron-down.png');
 }
 .chatbot-button-closed {
-  background-image:url('./resources/chatbot.png');
+  background-image:url('../../assets/chatbot.png');
 }
 
 @keyframes wiggle {

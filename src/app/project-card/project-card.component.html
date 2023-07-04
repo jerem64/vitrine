@@ -1,7 +1,21 @@
 <div class="project-card">
     <h2>{{ project.name }}</h2>
-    <img src="{{ project.thumbnail }}" alt="{{ project.name }}" />
+    <div class="project-image" #projectImage [style.backgroundImage]="'url(' + project.thumbnail + ')'"></div>
+
     <p>{{ project.description }}</p>
-    <button (click)="openNotebook.emit(project.notebookUrl)">View Notebook</button>
+    <div class="links-container">
+        <button class="button-link" (click)="openUrl.emit(project.notebookUrl)">
+            <div class="link-icon icon-colab"></div>
+            Notebook
+        </button>
+        <button class="button-link" (click)="openUrl.emit(project.datasetUrl)">
+            <div class="link-icon icon-dataset"></div>
+            Dataset
+        </button>
+        <button class="button-link" (click)="openUrl.emit(project.githubUrl)">
+            <div class="link-icon icon-github"></div>
+            Repository
+        </button>
+    </div>
 </div>
   
