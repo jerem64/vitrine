@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Jérémy Chassin';
 
-  selectedItem: string = 'home';
+  selectedItem: string = 'projects';
 
   loadContent(item: string) {
     this.selectedItem = item;
