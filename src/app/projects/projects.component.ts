@@ -11,6 +11,41 @@ export class ProjectsComponent implements OnInit {
 
   projects = [
     {
+      name: 'Opensource LLM Dolly',
+      thumbnail: '../../assets/Dolly-LLM.png',
+      technologies:'[HuggingFace], [Databricks Dolly], [LangChain], [Google Drive]',
+      description: `In this Notebook, I used the Databricks opensource LLM Dolly providing it PDF documents from a Google Drive folder. 
+      I used the HuggingFace pipeline and the langChain Q&A over documents chain to address the LLM.`,
+      
+      links:[
+        {
+          label: 'Get Dolly',
+          icon: '../../assets/hf-logo.png',
+          url: 'https://huggingface.co/databricks/dolly-v2-3b'
+        },
+        {
+          label: 'Notebook',
+          icon: '../../assets/icon-colab.png',
+          url: 'https://colab.research.google.com/drive/1B4HJUIR4mhQeCar_Fj6wPbAUjRX8LWq5#scrollTo=mzJIGtG1ZwF2'
+        }
+      ]
+    },
+    {
+      name: 'Chatbot using LLM over a document',
+      thumbnail: '../../assets/ChatbotLLM.png',
+      technologies:'[OpenAI], [LangChain], [Flask], [Google run], [Firebase], [Google cloud]',
+      description: `On this website, you can find on the bottom right Adrew, my chatbot.
+      It's using OpenAI Large Language Model and Langchain to load a document (my resume). The API is using Flask and is stored on hosted on Google Run.
+      The chatbot is on an angular website hosted on Firebase.`,
+      links:[
+        {
+          label: 'API',
+          icon: '../../assets/icon-github.png',
+          url: 'https://github.com/jerem64/API_Flask_OpenAI_CV'
+        }
+      ]
+    },
+    {
       name: 'Image classifier performance improvement with data augmentation using Object detection',
       thumbnail: '../../assets/ResNetYOLOClassifier.png',
       technologies:'[YOLOv8], [CNN], [ResNet 50], [TensorFlow Keras], [Tkinter]',
@@ -32,26 +67,6 @@ export class ProjectsComponent implements OnInit {
           label: 'Repository',
           icon: '../../assets/icon-github.png',
           url: 'https://github.com/jerem64/InterfaceDogBreedClassifier'
-        }
-      ]
-    },
-    {
-      name: 'Chatbot using LLM over a document',
-      thumbnail: '../../assets/ChatbotLLM.png',
-      technologies:'[OpenAI], [LangChain], [Flask], [Google run], [Firebase], [Google cloud]',
-      description: `On this website, you can find on the bottom right Adrew, my chatbot.
-      It's using OpenAI Large Language Model and Langchain to load a document (my resume). The API is using Flask and is stored on hosted on Google Run.
-      The chatbot is on an angular website hosted on Firebase.`,
-      links:[
-        {
-          label: 'Website',
-          icon: '../../assets/icon-github.png',
-          url: 'https://github.com/jerem64/vitrine'
-        },
-        {
-          label: 'API',
-          icon: '../../assets/icon-github.png',
-          url: 'https://github.com/jerem64/API_Flask_OpenAI_CV'
         }
       ]
     }

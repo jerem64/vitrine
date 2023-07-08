@@ -2,7 +2,7 @@
     <h2>{{ project.name }}</h2>
     <div class="project-image" #projectImage [style.backgroundImage]="'url(' + project.thumbnail + ')'"></div>
     <p class="highlighted-text">{{ project.technologies }}</p>
-    <p>{{ project.description }}</p>
+    <p class="project-description" [style.whiteSpace]="'pre-line'">{{ project.description }}</p>
     <div class="links-container">
         <button class="button-link" *ngFor="let link of project.links" (click)="openUrl.emit(link.url)">
             <div class="link-icon" #projectImage [style.backgroundImage]="'url(' + link.icon + ')'"></div>
@@ -10,4 +10,3 @@
         </button>
     </div>
 </div>
-  

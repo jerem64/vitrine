@@ -13,7 +13,6 @@
     background-size: contain;
     background-color: transparent;
     margin-bottom: 10px;
-    width: 100%;
     vertical-align: middle;
     border: none !important;
     border-radius: 5px;
@@ -25,7 +24,15 @@
     padding-bottom: 100%;
 }
   
-  
+.project-description {
+    white-space: pre-line;
+    /* Add any other desired styles for the project description */
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 10px;
+    color: #333;
+
+} 
 .project-card h2 {
     font-size: 20px;
     margin-top: 0;
