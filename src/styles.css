@@ -21,9 +21,11 @@ html, body {
     display: flex;
     flex-direction: column;
     background-color: black;
-    /*background-image: url('./assets/cropped-banner-background.png');*/
+    background-image: url('./assets/plexus_brain.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 300px;
+    background-position-y: -40px;
+    background-position-x: right -50px;
     color: white;
     height: 115px;
     width:100vw;
@@ -158,6 +160,13 @@ html, body {
     .title-function {
         left: 10;
         font-size: medium;
+    }
+
+    .navbar {
+        background-size: 185px;
+        background-position-y: -30px;
+        background-position-x: 275px;
+    
     }
 }
 
