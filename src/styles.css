@@ -1,5 +1,12 @@
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; color: rgb(51, 51, 51); }
+@font-face {
+    font-family: 'Raleway';
+    src: url('./assets/fonts/Raleway-VariableFont_wght.ttf') format('truetype');
+}
+html, body { 
+    height: 100%; 
+    margin: 0; 
+    font-family: Raleway, sans-serif;
+}
 
 .container {
     display: flex;
@@ -13,7 +20,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; color: rgb(
 .navbar {
     display: flex;
     flex-direction: column;
-    background-image: url('./assets/cropped-banner-background.png');
+    background-color: black;
+    /*background-image: url('./assets/cropped-banner-background.png');*/
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
@@ -65,21 +73,23 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; color: rgb(
     cursor: pointer;
     text-decoration: none;
     font-weight: bold;
+    font-size: small;
     position: relative;
     width: 120px;
     height: 40px;
-    border-radius: 3px 3px 0 0;
+    border-radius: 1px 1px 0 0;
     top: 16px;
+    text-transform: uppercase;
 }
 .button-as-text:hover {
-    font-size: 1.2em;
+    font-size: 1em;
     transition: font-size 0.3s;
 }
 .button-as-text.active {
     color: black;
     background-color: white;
     position: relative;
-    font-size: 1em;
+    font-size: small;
 }
 
 .circle-frame {
@@ -104,20 +114,16 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; color: rgb(
     right: 80px;
 }
 
-.title {
-    font-size: large;
+.title {    
     display: flex;
     flex-direction: column;
-}
-.title-spacer {
-    height: 0px;
-    width: 10px;
+    text-transform: uppercase;
 }
 .title-name {
-    font-size: large;
+    font-size: larger;
 }
 .title-function {
-    font-size: large;
+    font-size: small;
 }
 
 @media (min-width: 450px) {
@@ -144,11 +150,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; color: rgb(
 
     .title {
         display: flex;
-        flex-direction: row;
         justify-content: space-between;
     }
     .title-name {
-        font-size: large;
+        font-size: x-large;
     }
     .title-function {
         left: 10;
@@ -181,7 +186,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; color: rgb(
     background-color: #f8f8f8;
     justify-content: center;
     bottom: 0px;
-    height: 15px;
+    height: 20px;
     width: 100%;
     z-index: 1;
 }

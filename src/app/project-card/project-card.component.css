@@ -1,11 +1,12 @@
 .project-card {
     background-color: #f1f1f1;
-    padding: 20px;
+    padding: 10px;
     margin: 10px;
-    border-radius: 5px;
+    border-radius: 3px;
     min-width: 300px;
     max-width: 450px;
     flex: 1 1 450px;
+    box-shadow: 3px 4px 0px rgba(0, 0, 0, 0.5);
 }
 
 .project-image {
@@ -15,18 +16,12 @@
     margin-bottom: 10px;
     vertical-align: middle;
     border: none !important;
-    border-radius: 5px;
+    border-radius: 2px;
     position: relative;
-}
-.project-image::before {
-    content: "";
-    display: block;
-    padding-bottom: 100%;
 }
   
 .project-description {
     white-space: pre-line;
-    /* Add any other desired styles for the project description */
     font-size: 16px;
     line-height: 1.5;
     margin-top: 10px;
@@ -34,7 +29,8 @@
 
 } 
 .project-card h2 {
-    font-size: 20px;
+    font-size: medium;
+    text-transform: uppercase;
     margin-top: 0;
 }
   

@@ -11,6 +11,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProjectsComponent } from './projects/projects.component';
 import { ProjectCardComponent } from './project-card/project-card.component';
 import { SharedService } from './shared.service';
+import { MatCardModule } from '@angular/material/card';
+
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import { SharedService } from './shared.service';
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
+    MatCardModule,
     HttpClientModule
   ],
   providers: [SharedService],

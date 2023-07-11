@@ -49,9 +49,8 @@ export class ProjectsComponent implements OnInit {
       name: 'Chatbot using LLM over a document',
       thumbnail: '../../assets/ChatbotLLM.png',
       technologies:'[OpenAI], [LangChain], [Flask], [Google run], [Firebase], [Google cloud]',
-      description: `On this website, you can find on the bottom right Adrew, my chatbot.
-      It's using OpenAI Large Language Model and Langchain to load a document (my resume). The API is using Flask and is stored on hosted on Google Run.
-      The chatbot is on an angular website hosted on Firebase.`,
+      description: `On this Angular website hosted on Firebase, you can find on the bottom right Adrew, my chatbot.
+      It's using OpenAI Large Language Model and Langchain to load my resume. The Flask API is hosted on Google Run.`,
       links:[
         {
           label: 'Andrew',
@@ -66,7 +65,7 @@ export class ProjectsComponent implements OnInit {
       ]
     },
     {
-      name: 'Enhanced classifier with augmented object detection',
+      name: 'Enhanced classifier with object detection',
       thumbnail: '../../assets/ResNetYOLOClassifier.png',
       technologies:'[YOLOv8], [CNN], [ResNet 50], [TensorFlow Keras], [Tkinter]',
       description: `I utilized a pretrained Images Classifier to classify dog breeds, enhancing it with additional layers and an image generator.
