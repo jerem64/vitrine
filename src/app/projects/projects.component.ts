@@ -113,6 +113,31 @@ export class ProjectsComponent implements OnInit {
           url: 'https://jerem64-project-api-streamlitstackoverflow-streamlit-app-5tj1kk.streamlit.app/'
         }
       ]
+    },
+    {
+      name: 'E-commerce Customer segmentation',
+      thumbnail: '../../assets/customer-segmentation.png',
+      technologies:'[Scikit Learn], [PCA], [Seaborn], [Plotly], [yellowbrick], [DBSCAN], [K means], [SciPy]',
+      description: `In this project you will find an Exploratory Data Analysis, feature engineering, modelisation tests, process automation, clustering, supervised segmentation (RFM & Churn), unsupervised segmentation, segmentation analysis and segmentation stability over time analysis.
+      
+      `,
+      links:[
+        {
+          label: 'Clean',
+          icon: '../../assets/icon-colab.png',
+          url: 'https://colab.research.google.com/drive/1RYyMrDfJmtI2z35st9nKdJd9yfuUyAPH?usp=sharing'
+        },
+        {
+          label: 'Tests',
+          icon: '../../assets/icon-colab.png',
+          url: 'https://colab.research.google.com/drive/1RYyMrDfJmtI2z35st9nKdJd9yfuUyAPH?usp=sharing'
+        },
+        {
+          label: 'Sim.',
+          icon: '../../assets/icon-colab.png',
+          url: 'https://colab.research.google.com/drive/1SmH2E3V_AGm0RYV0Mzx00u83GJlC8non?usp=sharing'
+        }
+      ]
     }
   ];
 }
