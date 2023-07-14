@@ -125,12 +125,12 @@ export class ProjectsComponent implements OnInit {
         {
           label: 'Clean',
           icon: '../../assets/icon-colab.png',
-          url: 'https://colab.research.google.com/drive/1RYyMrDfJmtI2z35st9nKdJd9yfuUyAPH?usp=sharing'
+          url: 'https://colab.research.google.com/drive/1kkb99GxygtrvysU0hJiqifY0APZM3iPe?usp=sharing'
         },
         {
           label: 'Tests',
           icon: '../../assets/icon-colab.png',
-          url: 'https://colab.research.google.com/drive/1RYyMrDfJmtI2z35st9nKdJd9yfuUyAPH?usp=sharing'
+          url: 'https://colab.research.google.com/drive/1FmCJGEcvaorOUqFWqpaA1tyYBJAQHOEU?usp=sharing'
         },
         {
           label: 'Sim.',
