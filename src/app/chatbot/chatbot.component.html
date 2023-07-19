@@ -1,14 +1,22 @@
 <div class="chatbot-container" [class.visible]="isVisible">
-  <div class="chatbot-messages" #chatbotMessagesContainer *ngFor="let message of chatMessages; let i = index" [ngClass]="message.isUserMessage ? 'message user-message' : 'message chatbot-message'">
-    <div class="message">
-      {{ message.text }}
+  <div class="chatbot-title">
+    <p>
+      Chat about me with Andrew
+    </p>
+  </div>
+
+  <div class="chatbot-messages-container">
+    <div class="chatbot-messages" #chatbotMessagesContainer *ngFor="let message of chatMessages; let i = index" [ngClass]="message.isUserMessage ? 'message user-message' : 'message chatbot-message'">
+      <div class="message">
+        {{ message.text }}
+      </div>
     </div>
   </div>
-</div>
 
-<div class="chatbot-input" [class.visible]="isVisible">
-  <input class="chatbot-input-text" type="text" #chatbotInput [(ngModel)]="userInput" (keydown.enter)="sendMessage()" placeholder="Your message..." />
-  <button class="chatbot-input-send" (click)="sendMessage()"></button>
+  <div class="chatbot-input" [class.visible]="isVisible">
+    <input class="chatbot-input-text" type="text" #chatbotInput [(ngModel)]="userInput" (keydown.enter)="sendMessage()" placeholder="{{placeHolder}}" [disabled]="isThinking"/>
+    <button class="chatbot-input-send" (click)="sendMessage()" [disabled]="isThinking"></button>
+  </div>
 </div>
 
 <button class="chatbot-button" (click)="toggle()" [ngClass]="{ 'chatbot-button-open': isVisible, 'chatbot-button-closed': !isVisible, 'wiggle': isWiggling }"></button>

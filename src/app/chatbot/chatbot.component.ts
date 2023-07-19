@@ -21,6 +21,8 @@ export class ChatbotComponent implements AfterViewInit {
   chatMessages: ChatMessage[] = [];
   isVisible: boolean = false;
   isWiggling: boolean = true; // New property for button animation
+  isThinking: boolean = false;
+  placeHolder: string = 'Your message...'
 
   constructor(private renderer: Renderer2, private http: HttpClient, private sharedService: SharedService) {
     this.sharedService.chatbotEvent.subscribe(() => {
@@ -40,13 +42,13 @@ export class ChatbotComponent implements AfterViewInit {
       {
         this.chatbotInput.nativeElement.focus();
       }
-    }, 5);
+    }, 10);
   }
 
 
   toggle() {
     this.isVisible = !this.isVisible;
-    this.isWiggling = false; // Stop the button wiggle when toggling visibility
+    this.isWiggling = false;
 
     setTimeout(() => {
       if (this.isVisible)
@@ -57,19 +59,29 @@ export class ChatbotComponent implements AfterViewInit {
   }
 
   sendMessage() {
-    const debug = false;
+    const debug = true;
     const userMessage = this.userInput;
 
     if(this.userInput!="")
     {
-      this.chatMessages.unshift({ text: userMessage, isUserMessage: true });
+      this.isThinking = true;
+      this.placeHolder = "Andrew is thinking...";
+      this.chatMessages.push({ text: userMessage, isUserMessage: true });
 
       const apiUrl = 'https://apiflaskopenaicv-fhwxqvaupa-ew.a.run.app/ask_question';
       const payload = { input: userMessage };
 
       if(debug)
       {
-        this.chatMessages.unshift({ text: "réponse du bot" + userMessage , isUserMessage: false });
+        setTimeout(() => {
+          this.chatMessages.push({ text: "réponse du bot à : " + userMessage , isUserMessage: false });
+          this.isThinking = false;
+          this.placeHolder = "Your message...";
+
+          setTimeout(() => {
+            this.chatbotInput.nativeElement.focus();
+          }, 10);
+        }, 1500);
       }
       else
       {
@@ -77,13 +89,19 @@ export class ChatbotComponent implements AfterViewInit {
           const apiResponse = response as { output: string };
           const botResponse = apiResponse.output;
 
-          this.chatMessages.unshift({ text: botResponse, isUserMessage: false });
+          this.chatMessages.push({ text: botResponse, isUserMessage: false });
+          this.isThinking = false;
+          this.placeHolder = "Your message...";
+
+          setTimeout(() => {
+            this.chatbotInput.nativeElement.focus();
+          }, 10);
         });
       }
 
       // Supprime les anciens messages pour conserver uniquement les 8 derniers
       if (this.chatMessages.length > 20) {
-        this.chatMessages.splice(0 - 2);
+        this.chatMessages.splice(0, 2);
       }
 
       // Réinitialise la valeur de la textbox
