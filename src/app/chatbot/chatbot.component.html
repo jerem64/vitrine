@@ -5,8 +5,8 @@
     </p>
   </div>
 
-  <div class="chatbot-messages-container">
-    <div class="chatbot-messages" #chatbotMessagesContainer *ngFor="let message of chatMessages; let i = index" [ngClass]="message.isUserMessage ? 'message user-message' : 'message chatbot-message'">
+  <div class="chatbot-messages-container" #chatbotMessagesContainer>
+    <div class="chatbot-messages" *ngFor="let message of chatMessages; let i = index" [ngClass]="message.isUserMessage ? 'message user-message' : 'message chatbot-message'">
       <div class="message">
         {{ message.text }}
       </div>

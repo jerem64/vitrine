@@ -1,4 +1,4 @@
-import { Component, Renderer2, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, Renderer2, ElementRef, ViewChild, AfterViewInit, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { SharedService } from '../shared.service';
 
@@ -12,7 +12,7 @@ interface ChatMessage {
   templateUrl: './chatbot.component.html',
   styleUrls: ['./chatbot.component.css']
 })
-export class ChatbotComponent implements AfterViewInit {
+export class ChatbotComponent implements AfterViewInit, OnInit {
   @ViewChild('chatbotMessagesContainer', { static: false }) chatbotMessagesContainer!: ElementRef;
   @ViewChild('chatbotInput', { static: false }) chatbotInput!: ElementRef;
 
@@ -28,6 +28,12 @@ export class ChatbotComponent implements AfterViewInit {
     this.sharedService.chatbotEvent.subscribe(() => {
       this.openChatbot();
     });
+    this.isVisible = true;
+  }
+
+  ngOnInit() {
+    // Call this method when you need to scroll down the chatbot container
+    this.scrollChatbotContainerToBottom();
   }
 
   ngAfterViewInit() {
@@ -67,6 +73,9 @@ export class ChatbotComponent implements AfterViewInit {
       this.isThinking = true;
       this.placeHolder = "Andrew is thinking...";
       this.chatMessages.push({ text: userMessage, isUserMessage: true });
+      setTimeout(() => {
+        this.scrollChatbotContainerToBottom();
+      }, 10);
 
       const apiUrl = 'https://apiflaskopenaicv-fhwxqvaupa-ew.a.run.app/ask_question';
       const payload = { input: userMessage };
@@ -80,6 +89,7 @@ export class ChatbotComponent implements AfterViewInit {
 
           setTimeout(() => {
             this.chatbotInput.nativeElement.focus();
+            this.scrollChatbotContainerToBottom();
           }, 10);
         }, 1500);
       }
@@ -95,6 +105,7 @@ export class ChatbotComponent implements AfterViewInit {
 
           setTimeout(() => {
             this.chatbotInput.nativeElement.focus();
+            this.scrollChatbotContainerToBottom();
           }, 10);
         });
       }
@@ -108,5 +119,10 @@ export class ChatbotComponent implements AfterViewInit {
       this.userInput = '';
       this.chatbotInput.nativeElement.focus();
     }
+  }
+
+  scrollChatbotContainerToBottom() {
+    const container = this.chatbotMessagesContainer.nativeElement;
+    container.scrollTop = container.scrollHeight;
   }
 }
