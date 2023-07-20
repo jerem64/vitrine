@@ -1,3 +1,29 @@
 .app-root {
     font-family: 'Raleway', sans-serif;
 }
+
+.floatingMessage{
+    position: fixed;
+    color: rgb(147, 50, 238);
+    text-transform: uppercase;
+    font-size: x-large;
+    font-weight: bold;
+    text-decoration: underline;
+    top: 45px;
+    right: 300px;
+    cursor: pointer;    
+}
+
+@media (max-width: 400px) {
+    .floatingMessage{
+        position: fixed;
+        color: rgb(147, 50, 238);
+        text-transform: uppercase;
+        font-size: small;
+        font-weight: bold;
+        text-decoration: underline;
+        top: 55px;
+        right: 80px;
+        cursor: pointer;    
+    }
+  }
