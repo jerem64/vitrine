@@ -16,4 +16,5 @@ export class ResumeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  cvPdfUrl = '/assets/Resume_Jeremy_Chassin.pdf';
 }

@@ -65,6 +65,9 @@ html, body {
 .linkedin-icon {
     background-image: url('./assets/icon-linkedin.png');
 }
+.resume-icon {
+    background-image: url('./assets/icon-cv.png');
+}
 
 .button-as-text {
     background: none;

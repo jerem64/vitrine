@@ -47,6 +47,9 @@ h1 {
 .phone-img {
     background-image:url('../../assets/icon-phone.png');
 }
+.download-img {
+    background-image:url('../../assets/icon-download.png');
+}
 
 .horizontal-line {
     border: 1px;

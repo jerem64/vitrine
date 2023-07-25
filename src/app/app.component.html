@@ -8,12 +8,13 @@
       </div>
       
       <a class="floatingMessage" (click)="openChatbot()">
-        Try my LLM over document Bot !
+        Try my LLM over document chatBot !
       </a>
 
       <div class="links">
-        <a class="email-icon icon" target="_blank" href="mailto:jerem.chassin@gmail.com"></a>    
-        <a class="linkedin-icon icon" target="_blank" href="https://www.linkedin.com/in/jeremy-chassin/"></a>    
+        <a class="email-icon icon" target="_blank" href="mailto:jerem.chassin@gmail.com" title="write me"></a>
+        <a class="resume-icon icon" [href]="cvPdfUrl" download="Resume_Jeremy_Chassin.pdf" title="download my resume"></a>
+        <a class="linkedin-icon icon" target="_blank" href="https://www.linkedin.com/in/jeremy-chassin/"></a>
       </div>
 
       <div class="circle-frame">
@@ -29,11 +30,11 @@
 
   <div class="content">
     <div class="content-container">
-      <ng-container *ngIf="selectedItem === 'home'" >
+      <ng-container *ngIf="selectedItem === 'home'">
         <app-home ></app-home>
       </ng-container>
 
-      <ng-container *ngIf="selectedItem === 'projects'" >
+      <ng-container *ngIf="selectedItem === 'projects'">
         <app-projects></app-projects>
       </ng-container>
 

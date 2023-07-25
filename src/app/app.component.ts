@@ -16,6 +16,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
   }
   title = 'Jérémy Chassin';
+  cvPdfUrl = '/assets/Resume_Jeremy_Chassin.pdf';
 
   selectedItem: string = 'home';
 
