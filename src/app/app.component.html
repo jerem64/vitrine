@@ -22,9 +22,9 @@
     </div>
 
     <div class="menu">
-      <button class="button-as-text" (click)="loadContent('home')" [ngClass]="{'active': selectedItem === 'home'}">About me</button>
-      <button class="button-as-text" (click)="loadContent('projects')" [ngClass]="{'active': selectedItem === 'projects'}">Projects</button>
-      <button class="button-as-text" (click)="loadContent('resume')" [ngClass]="{'active': selectedItem === 'resume'}">Resume</button>
+      <button class="button-as-text" (click)="navigateTo('home')" [ngClass]="{'active': selectedItem === 'home'}">About me</button>
+      <button class="button-as-text" (click)="navigateTo('projects')" [ngClass]="{'active': selectedItem === 'projects'}">Projects</button>
+      <button class="button-as-text" (click)="navigateTo('resume')" [ngClass]="{'active': selectedItem === 'resume'}">Resume</button>
     </div>
   </div>
 

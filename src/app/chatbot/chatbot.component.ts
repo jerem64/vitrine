@@ -28,7 +28,6 @@ export class ChatbotComponent implements AfterViewInit, OnInit {
     this.sharedService.chatbotEvent.subscribe(() => {
       this.openChatbot();
     });
-    this.isVisible = true;
   }
 
   ngOnInit() {
@@ -65,7 +64,7 @@ export class ChatbotComponent implements AfterViewInit, OnInit {
   }
 
   sendMessage() {
-    const debug = true;
+    const debug = false;
     const userMessage = this.userInput;
 
     if(this.userInput!="")

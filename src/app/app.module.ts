@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
@@ -13,6 +14,12 @@ import { ProjectCardComponent } from './project-card/project-card.component';
 import { SharedService } from './shared.service';
 import { MatCardModule } from '@angular/material/card';
 
+
+const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'resume', component: ResumeComponent },
+  { path: 'projects', component: ProjectsComponent }
+];
 
 @NgModule({
   declarations: [
@@ -29,9 +36,13 @@ import { MatCardModule } from '@angular/material/card';
     BrowserAnimationsModule,
     FormsModule,
     MatCardModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(routes)
   ],
+  exports: [RouterModule],
   providers: [SharedService],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
+export class AppRoutingModule { }
