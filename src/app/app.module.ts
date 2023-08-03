@@ -16,7 +16,8 @@ import { MatCardModule } from '@angular/material/card';
 
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
   { path: 'resume', component: ResumeComponent },
   { path: 'projects', component: ProjectsComponent }
 ];
