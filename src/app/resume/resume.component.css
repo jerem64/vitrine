@@ -51,6 +51,11 @@ h1 {
     background-image:url('../../assets/icon-download.png');
 }
 
+.icon-experience {
+    vertical-align: middle;
+    height: 1em;
+}
+
 .horizontal-line {
     border: 1px;
     border-top: 1px solid black;
@@ -82,8 +87,16 @@ a:hover {
     color: rgb(68, 68, 68);
 }
 
-.job-title {
-    font-size: larger;
+[class*="experience-title"]{
+    font-size: large;
+    font-weight: bold;
+    display: inline;
+}
+.experience-title-school {
+    color: #5271FF;
+}
+.experience-title-job {
+    color: #FF914D;
 }
 
 .cbimg {
@@ -98,6 +111,16 @@ a:hover {
     vertical-align: middle; /* Ajout de la propriété */
     cursor:pointer;
 }
+
+ul.dashed-list {
+    list-style-type: none; /* Remove the default bullet */
+    padding-left: 0; /* Remove default left padding/margin */
+}
+
+ul.dashed-list li:before {
+    content: "- "; /* Add a dash before each list item */
+}
+
 
 /* Media query for smartphones */
 @media (max-width: 576px) {

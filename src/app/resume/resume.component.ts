@@ -17,4 +17,7 @@ export class ResumeComponent implements OnInit {
   }
 
   cvPdfUrl = '/assets/Resume_Jeremy_Chassin.pdf';
+  masterMLEPdfUrl = '/assets/Diploma_Master_MLE_Jeremy_Chassin.pdf';
+  masterIBEPdfUrl = '/assets/Diploma_Master_IBE_Jeremy_Chassin.pdf';
+  BEngIGPdfUrl = '/assets/Diploma_BTS_IG_Jeremy_Chassin.pdf';  
 }
