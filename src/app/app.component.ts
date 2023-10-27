@@ -10,6 +10,7 @@ import { filter } from 'rxjs/operators';
 })
 export class AppComponent implements OnInit {
   selectedItem: string = 'home';
+  menu = false;
   title = 'Jérémy Chassin';
   cvPdfUrl = '/assets/Resume_Jeremy_Chassin.pdf';
 
@@ -19,7 +20,17 @@ export class AppComponent implements OnInit {
     this.sharedService.openChatbot();
   }
 
+  openCloseMenu(opened= this.menu): void {
+    if (opened){
+      this.menu = false;
+    }
+    else{
+      this.menu = true;
+    }
+  }
+
   navigateTo(item: string) {
+    this.openCloseMenu(true);
     this.selectedItem = item;
     this.router.navigate([item]);
   }

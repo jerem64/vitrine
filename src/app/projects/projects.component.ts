@@ -54,7 +54,7 @@ export class ProjectsComponent implements OnInit {
       links:[
         {
           label: 'Andrew',
-          icon: '../../assets/icon-chatbot-dark.png',
+          icon: '../../assets/icon-chatbot.png',
           url: 'chatbot'
         },
         {

@@ -12,22 +12,44 @@
 }
 
 .home-container {
-    padding: 0 20px 20px 20px;
+    margin: 20px 0px;
 }
 
-
-
-
-.contact {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
+.text-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 1px 10px 10px 10px;
+    margin: 10px 0 20px 0;
 }
-.contact-info {
+.title {
+    text-transform: uppercase;
+    font-size: medium;
+    font-weight: 800;
+    color: rgb(60, 60, 60);
+}
+.generative-AI {
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: underline;
+    background-color: red;
+    background-image: linear-gradient(45deg, green, #0000FF, #8000FF);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+.contacts {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    padding: 0 0 0 0;
+    justify-content: center;
+    padding: 10px 0 0 0;
+}
+.contact {
+    display: flex;
+    flex-direction: row;
+    padding: 0 10px;
 }
 
 .icon-img {
@@ -40,11 +62,20 @@
     vertical-align: middle; /* Ajout de la propriété */
 }
 .mail-img {
-    background-image:url('../../assets/icon-email.png');
+    background-image:url('../../assets/icons8-mail-100.png');
 }
 .linkedin-img {
-    background-image:url('../../assets/icon-linkedin.png');
+    background-image:url('../../assets/icons8-linkedin-50.png');
 }
 .phone-img {
-    background-image:url('../../assets/icon-phone.png');
+    background-image:url('../../assets/icons8-phone-48.png');
 }
+
+@media (max-width: 800px) {
+    .contacts {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px 0 0 0;
+    }
+  }

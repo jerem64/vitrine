@@ -1,34 +1,69 @@
 <div class="container">
-  <div class="navbar fixed-navbar">
-    <div class="top-elements">
-      <div class="title">
-        <div class="title-name">Jérémy Chassin</div>
-        <div class="title-spacer"></div>
-        <div class="title-function">Machine Learning Engineer</div>
-      </div>
-      
-      <a class="floatingMessage" (click)="openChatbot()">
-        Try my LLM over document chatBot !
-      </a>
+  <div class="navbar">
+    <div class="componants">
+      <div class="left-div">
+        <div class="logo">
+        </div>
 
-      <div class="links">
-        <a class="email-icon icon" target="_blank" href="mailto:jerem.chassin@gmail.com" title="write me"></a>
-        <a class="resume-icon icon" [href]="cvPdfUrl" download="Resume_Jeremy_Chassin.pdf" title="download my resume"></a>
-        <a class="linkedin-icon icon" target="_blank" href="https://www.linkedin.com/in/jeremy-chassin/"></a>
+        <div class="title">
+          <div class="title-name">Jérémy Chassin</div>
+          <div class="title-spacer"></div>
+          <div class="title-function">Machine Learning Engineer</div>
+        </div>
       </div>
 
-      <div class="circle-frame">
+      <div class="right-div">
+        <div class="menu">
+          <button class="button-as-text" (click)="navigateTo('home')" [ngClass]="{'active': selectedItem === 'home'}">About me</button>
+          <button class="button-as-text" (click)="navigateTo('projects')" [ngClass]="{'active': selectedItem === 'projects'}">Projects</button>
+          <button class="button-as-text" (click)="navigateTo('resume')" [ngClass]="{'active': selectedItem === 'resume'}">Resume</button>
+        </div>
+        
+        <div class="links">
+          <a class="icon email" target="_blank" href="mailto:jerem.chassin@gmail.com" title="write me"></a>
+          <a class="icon resume" [href]="cvPdfUrl" download="Resume_Jeremy_Chassin.pdf" title="download my resume"></a>
+          <a class="icon linkedin" target="_blank" href="https://www.linkedin.com/in/jeremy-chassin/"></a>
+        </div>
+
+        <div class="profile-picture">
+        </div>
+      </div>
+
+      <div class="left-div-small">
+        <div class="logo">
+        </div>
+
+        <div class="title">
+          <div class="title-name">Jérémy Chassin</div>
+          <div class="title-spacer"></div>
+          <div class="title-function">Machine Learning Engineer</div>
+        </div>
+      </div>
+
+      <div class="right-div-small">
+        <button class="menu-button" (click)="openCloseMenu()">
+        </button>
       </div>
     </div>
-
-    <div class="menu">
-      <button class="button-as-text" (click)="navigateTo('home')" [ngClass]="{'active': selectedItem === 'home'}">About me</button>
-      <button class="button-as-text" (click)="navigateTo('projects')" [ngClass]="{'active': selectedItem === 'projects'}">Projects</button>
-      <button class="button-as-text" (click)="navigateTo('resume')" [ngClass]="{'active': selectedItem === 'resume'}">Resume</button>
+  </div>
+  
+  <div class="menu-small" *ngIf="menu">
+    <button class="button-as-text" (click)="navigateTo('home')" [ngClass]="{'active': selectedItem === 'home'}">About me</button>
+    <button class="button-as-text" (click)="navigateTo('projects')" [ngClass]="{'active': selectedItem === 'projects'}">Projects</button>
+    <button class="button-as-text" (click)="navigateTo('resume')" [ngClass]="{'active': selectedItem === 'resume'}">Resume</button>
+        
+    <div class="links">
+      <a class="icon email" target="_blank" href="mailto:jerem.chassin@gmail.com" title="write me"></a>
+      <a class="icon resume" [href]="cvPdfUrl" download="Resume_Jeremy_Chassin.pdf" title="download my resume"></a>
+      <a class="icon linkedin" target="_blank" href="https://www.linkedin.com/in/jeremy-chassin/"></a>
     </div>
   </div>
 
   <div class="content">
+    <video autoplay loop muted oncanplay="this.play()" onloadedmetadata="this.muted = true" playsInline class="back-video">  
+      <source src="../assets/black_dot_annimated.mp4" type="video/mp4">
+    </video>
+
     <div class="content-container">
       <ng-container *ngIf="selectedItem === 'home'">
         <app-home ></app-home>
