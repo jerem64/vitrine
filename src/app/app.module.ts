@@ -13,13 +13,15 @@ import { ProjectsComponent } from './projects/projects.component';
 import { ProjectCardComponent } from './project-card/project-card.component';
 import { SharedService } from './shared.service';
 import { MatCardModule } from '@angular/material/card';
+import { RedirectHandlerComponent } from './redirect-handler/redirect-handler.component';
 
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'resume', component: ResumeComponent },
-  { path: 'projects', component: ProjectsComponent }
+  { path: 'projects', component: ProjectsComponent },
+  { path: 'redirect-handler', component: RedirectHandlerComponent }
 ];
 
 @NgModule({
@@ -29,7 +31,8 @@ const routes: Routes = [
     ResumeComponent,
     ChatbotComponent,
     ProjectsComponent,
-    ProjectCardComponent
+    ProjectCardComponent,
+    RedirectHandlerComponent
   ],
   imports: [
     MatIconModule,

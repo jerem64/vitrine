@@ -32,7 +32,7 @@ export class ChatbotComponent implements AfterViewInit, OnInit {
 
   ngOnInit() {
     // Call this method when you need to scroll down the chatbot container
-    this.scrollChatbotContainerToBottom();
+    //this.scrollChatbotContainerToBottom();
   }
 
   ngAfterViewInit() {

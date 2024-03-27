@@ -1,0 +1,9 @@
+.base-container {
+    margin: 20px 0px;
+}
+
+.text-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 1px 10px 10px 10px;
+    margin: 10px 0 20px 0;
+}
